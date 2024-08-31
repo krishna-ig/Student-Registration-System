@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        h1 {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 50%;
+            border-radius: 0.375rem;
+            background-color: rgb(31, 41, 55);
+            margin: 0.5rem;
+            padding: 0.5rem;
+            color: white;
+            --tw-bg-opacity: 1;
+        }
+
+        #submit {
+            background-color: rgb(59, 130, 246);
+            border-radius: 0.375rem;
+            font-weight: 700;
+            margin: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        #submit:hover {
+            background-color: rgb(147, 197, 253);
+        }
+
+        body {
+            background-image: url("full-bg-image.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+    </style>
+</head>
+
+<body class="m-5">
+    <main>
+        <h1>Student Registration System</h1>
+        <form id="studentForm" class="mb-5">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name here!" required><br>
+            <label for="class">Class:</label>
+            <input type="text" id="class" placeholder="Enter your className!" required><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Address" required><br>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="mobileNumber" pattern="\d{10}" required
+                placeholder="Enter a 10-digit mobile number" maxlength="10"
+                title="Please enter a 10-digit mobile number">
+            <button id="submit" type="button" onclick="addStudent()">Add Student</button>
+        </form>
+    </main>
+    <h2>Registered Students</h2>
+    <table id="studentsTable" class="w-full border-collapse border-2 border-black">
+        <thead class="border-2 border-black">
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
